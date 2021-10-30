@@ -22,4 +22,9 @@ public class LeapYearTest {
     public void identifies2016AsLeapYear() {
         assertTrue(new Year(2016).isLeap());
     }
+
+    @Test
+    public void identifies2012AsLeapYear() {
+        assertTrue(new Year(2012).isLeap());
+    }
 }

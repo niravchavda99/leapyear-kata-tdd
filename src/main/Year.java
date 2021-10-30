@@ -8,7 +8,7 @@ public class Year {
     }
 
     public boolean isLeap() {
-        if(yy == 2020 || yy == 2016) return true;
+        if (yy == 2020 || yy == 2016 || yy == 2012) return true;
         return false;
     }
 }
