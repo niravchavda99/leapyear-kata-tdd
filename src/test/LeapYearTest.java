@@ -1,6 +1,8 @@
 package test;
 
 import main.Year;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import static org.testng.AssertJUnit.assertFalse;
@@ -13,18 +15,14 @@ public class LeapYearTest {
         assertFalse(new Year(2021).isLeap());
     }
 
-    @Test
-    public void identifies2020AsLeapYear() {
-        assertTrue(new Year(2020).isLeap());
+    @DataProvider(name = "leapYears")
+    public Object[] getLeapYears() {
+        return new Object[]{2020, 2016, 2012};
     }
 
-    @Test
-    public void identifies2016AsLeapYear() {
-        assertTrue(new Year(2016).isLeap());
-    }
-
-    @Test
-    public void identifies2012AsLeapYear() {
-        assertTrue(new Year(2012).isLeap());
+    @Test(dataProvider = "leapYears")
+    @Parameters({"year"})
+    public void identifiesLeapYears(int year) {
+        assertTrue(new Year(year).isLeap());
     }
 }
