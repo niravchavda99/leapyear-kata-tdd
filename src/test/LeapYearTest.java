@@ -12,7 +12,7 @@ import static org.testng.AssertJUnit.assertTrue;
 public class LeapYearTest {
     @DataProvider(name = "leapYears")
     public Object[] getLeapYears() {
-        return new Object[]{2020, 2016, 2012, 2000, 1600};
+        return new Object[]{2020, 2016, 2012, 2000, 1600, 1200};
     }
 
     @DataProvider(name = "commonYears")
