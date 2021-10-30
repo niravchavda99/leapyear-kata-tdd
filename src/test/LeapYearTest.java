@@ -17,4 +17,9 @@ public class LeapYearTest {
     public void identifies2020AsLeapYear() {
         assertTrue(new Year(2020).isLeap());
     }
+
+    @Test
+    public void identifies2016AsLeapYear() {
+        assertTrue(new Year(2016).isLeap());
+    }
 }
