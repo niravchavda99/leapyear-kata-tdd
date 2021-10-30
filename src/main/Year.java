@@ -8,7 +8,7 @@ public class Year {
     }
 
     public boolean isLeap() {
-        if(yy == 2000) return true;
+        if(yy == 2000 || yy == 1600) return true;
         if (yy % 100 == 0) return false;
         return yy % 4 == 0;
     }
