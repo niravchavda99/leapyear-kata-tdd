@@ -20,6 +20,11 @@ public class LeapYearTest {
         assertFalse(new Year(1900).isLeap());
     }
 
+    @Test
+    public void identifies1800AsCommonYear() {
+        assertFalse(new Year(1800).isLeap());
+    }
+
     @DataProvider(name = "leapYears")
     public Object[] getLeapYears() {
         return new Object[]{2020, 2016, 2012};
