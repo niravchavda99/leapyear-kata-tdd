@@ -17,12 +17,7 @@ public class LeapYearTest {
 
     @DataProvider(name = "commonYears")
     public Object[] getCommonYears() {
-        return new Object[]{1900, 1800, 1700};
-    }
-
-    @Test
-    public void identifies2021AsNonLeapYear() {
-        assertFalse(new Year(2021).isLeap());
+        return new Object[]{1900, 1800, 1700, 2021, 1998, 1999, 1854, 1971};
     }
 
     @Test(dataProvider = "commonYears")
