@@ -25,6 +25,11 @@ public class LeapYearTest {
         assertFalse(new Year(2021).isLeap());
     }
 
+    @Test
+    public void identifies2000AsLeapYear() {
+        assertTrue(new Year(2000).isLeap());
+    }
+
     @Test(dataProvider = "commonYears")
     @Parameters("year")
     public void identifiesCommonYears(int year) {
